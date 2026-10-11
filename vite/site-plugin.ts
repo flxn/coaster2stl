@@ -227,9 +227,9 @@ export default function sitePlugin({ site, faq, version }: { site: SiteConfig; f
           description: messages[defaultLocale].seo.description,
           lang: defaultLocale,
           icons: [
-            { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-            { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
-            { src: '/favicon.png', sizes: '64x64', type: 'image/png' },
+            { src: '/icon-192.png?v=2', sizes: '192x192', type: 'image/png' },
+            { src: '/icon-512.png?v=2', sizes: '512x512', type: 'image/png' },
+            { src: '/favicon.png?v=2', sizes: '64x64', type: 'image/png' },
           ],
           theme_color: '#ffffff',
           background_color: '#ffffff',

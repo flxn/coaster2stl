@@ -60,7 +60,7 @@ export interface SiteConfig {
 
 const siteConfig: SiteConfig = {
   name: 'Coaster2STL',
-  logo: '/logo.svg',
+  logo: '/coaster2stl-logo.png',
   url: 'https://coaster2stl.printer.tools/',
   image: 'https://coaster2stl.printer.tools/preview.png',
   filePrefix: 'coaster',

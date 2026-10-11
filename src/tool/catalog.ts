@@ -84,7 +84,7 @@ export type ThemeId = keyof typeof THEMES;
 /* The full icon and brand library is searched through the server API. */
 /* ------------------------------------------------------------------ */
 
-export const QUICK_ICONS: Record<string, { name: string; path: string }> = {
+export const QUICK_ICONS = {
   coffee: { name: 'Coffee', path: mdiCoffee },
   tea: { name: 'Tea', path: mdiTea },
   kettle: { name: 'Kettle', path: mdiKettle },
@@ -169,13 +169,4 @@ export const QUICK_ICONS: Record<string, { name: string; path: string }> = {
   nozzle: { name: '3D printer nozzle', path: mdiPrinter3dNozzle },
   cube: { name: 'Cube', path: mdiCube },
   hexagons: { name: 'Hexagons', path: mdiHexagonMultiple },
-};
-
-/* ------------------------------------------------------------------ */
-/* "Surprise me"                                                       */
-/* ------------------------------------------------------------------ */
-
-export const SURPRISE_TEXTS = {
-  top: ['COFFEE FIRST', 'CHEERS', 'BAR IS OPEN', 'HOME SWEET HOME', 'STAY HYDRATED', 'HAPPY HOUR', 'TEA TIME', 'GOOD VIBES ONLY', 'MADE WITH LOVE', 'BUT FIRST, COFFEE'],
-  bottom: ['EST. 2026', 'NO RINGS ALLOWED', 'PRINTED WITH LOVE', 'SINCE TODAY', 'DRINK RESPONSIBLY', 'ONE MORE CUP', 'KEEP IT COOL'],
-} as const;
+} satisfies Record<string, { name: string; path: string }>;
