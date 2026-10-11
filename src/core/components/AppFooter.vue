@@ -16,13 +16,7 @@
           <a :href="siteConfig.links.directory" target="_blank" rel="noopener"><strong>{{ directoryName }}</strong></a>
         </template>
       </i18n-t>
-      <div v-if="siteConfig.relatedTools.length" class="site-footer__related">
-        <span>{{ t('alsoTry') }}</span>
-        <a v-for="tool in siteConfig.relatedTools" :key="tool.url" class="related-tool" :href="tool.url" target="_blank" rel="noopener">
-          <UiIcon :name="tool.icon" />
-          {{ tool.name }}
-        </a>
-      </div>
+      <ToolLinks />
       <p class="site-footer__links">
         <a v-if="siteConfig.links.repository" :href="siteConfig.links.repository" target="_blank" rel="noopener">
           <UiIcon name="github" /> {{ t('viewSource') }}
@@ -41,6 +35,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import siteConfig from '@/site.config';
+import ToolLinks from './ToolLinks.vue';
 import UiIcon from './ui/UiIcon.vue';
 
 const { t } = useI18n();

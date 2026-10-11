@@ -1,6 +1,15 @@
 import type { CoreMessages } from './en.ts';
 
 const de: CoreMessages = {
+  crossPromo: {
+    "moreTools": "Weitere Tools",
+    "allTools": "Alle Tools auf printer.tools",
+    "title": "Mehr zum Drucken",
+    "footer": "Auch ausprobieren",
+    "qrcode2stl": "Drucke QR-Tags, WLAN-Schilder und Spotify-Codes.",
+    "businesscard2stl": "Gestalte eine Visitenkarte mit deinen Kontaktdaten und deinem Logo.",
+    "coaster2stl": "Gestalte Untersetzer mit Schrift, Icons und Mustern."
+  },
   languageLocalName: 'Deutsch',
 
   // general

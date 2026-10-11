@@ -7,6 +7,8 @@
 
     <slot name="before" />
 
+    <ToolPromotions />
+
     <nav class="info-nav" :aria-label="t('infoNavigation')">
       <a class="info-nav__link" href="#printguide">
         <UiIcon name="book-open" />
@@ -111,6 +113,7 @@ import changelog from '../../../CHANGELOG.md?raw';
 import siteConfig from '@/site.config';
 import type { FaqEntry } from '../tool';
 import AdSlot from './AdSlot.vue';
+import ToolPromotions from './ToolPromotions.vue';
 import UiIcon from './ui/UiIcon.vue';
 
 defineProps<{

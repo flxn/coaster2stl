@@ -1,10 +1,13 @@
 <template>
   <header class="app-header">
     <div ref="inner" class="app-header__inner">
-      <a class="brand" href="/" :aria-label="siteConfig.name">
-        <img :src="siteConfig.logo" alt="" class="brand__logo" width="34" height="34" />
-        <span class="brand__name">{{ siteConfig.name }}</span>
-      </a>
+      <div class="brand-group">
+        <a class="brand" href="/" :aria-label="siteConfig.name">
+          <img :src="siteConfig.logo" alt="" class="brand__logo" width="34" height="34" />
+          <span class="brand__name">{{ siteConfig.name }}</span>
+        </a>
+        <ToolSwitcher />
+      </div>
 
       <div v-if="showHeaderAd" class="header-ad">
         <AdSlot name="header" />
@@ -137,6 +140,7 @@ import { useTheme } from '../composables/useTheme';
 import { modifierKey } from '../utils/platform';
 import AdSlot from './AdSlot.vue';
 import LanguageSelector from './LanguageSelector.vue';
+import ToolSwitcher from './ToolSwitcher.vue';
 import UiIcon from './ui/UiIcon.vue';
 import UiPopover from './ui/UiPopover.vue';
 

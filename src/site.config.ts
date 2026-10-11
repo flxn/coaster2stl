@@ -1,3 +1,5 @@
+import { relatedTools } from './cross-promotion/tools.ts';
+
 /**
  * Everything that identifies this tool: name, URLs, links, ads and analytics.
  * Search engine texts (title, description, features) are translated and live in src/tool/i18n (`seo`).
@@ -75,10 +77,7 @@ const siteConfig: SiteConfig = {
     contact: 'mailto:mail@flxn.de',
     directory: 'https://printer.tools',
   },
-  relatedTools: [
-    { name: 'QRCode2STL', url: 'https://qrcode2stl.printer.tools', icon: 'qr-code' },
-    { name: 'Business Card Generator', url: 'https://businesscard2stl.printer.tools', icon: 'contact' },
-  ],
+  relatedTools,
   analytics: {
     umamiScript: 'https://track.printer.tools/script.js',
     umamiWebsiteId: '258386d2-ef57-4a9a-99a4-4bcff82d508e',

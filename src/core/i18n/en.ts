@@ -3,6 +3,15 @@
  * vue-i18n treats { } @ $ | as syntax: write {'@'} for a literal @.
  */
 const en = {
+  crossPromo: {
+    "moreTools": "More tools",
+    "allTools": "All printer.tools",
+    "title": "More things to print",
+    "footer": "Also try",
+    "qrcode2stl": "Print QR tags, Wi-Fi signs, and Spotify codes.",
+    "businesscard2stl": "Make a business card with your contact details and logo.",
+    "coaster2stl": "Design coasters with lettering, icons, and patterns."
+  },
   languageLocalName: 'English',
 
   // general
