@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+    <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+    <script>
+      // Apply the saved or system color theme before first paint to avoid a flash.
+      (function () {
+        var theme = 'light';
+        try {
+          var stored = window.localStorage.getItem('theme');
+          if (stored === 'light' || stored === 'dark') {
+            theme = stored;
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+          }
+        } catch (e) {}
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    <!-- title, meta, hreflang, OpenGraph, JSON-LD, analytics and ads per language: see vite/site-plugin.ts -->
+    <!--seo-head--><!--/seo-head-->
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but %SITE_NAME% doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <!-- static content for crawlers without JavaScript; replaced when the app starts -->
+    <div id="app"><!--seo-body--><!--/seo-body--></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

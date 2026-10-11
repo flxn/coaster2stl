@@ -1,0 +1,51 @@
+{
+  "name": "coaster2stl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --build && vite build",
+    "start": "node --disable-warning=ExperimentalWarning server/index.ts",
+    "preview": "npm run build && npm start",
+    "typecheck": "vue-tsc --build",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "@mdi/js": "^7.4.47",
+    "clipper-lib": "^6.4.2",
+    "hono": "^4.13.13",
+    "jszip": "^3.10.2",
+    "markdown-it": "^15.0.2",
+    "opentype.js": "^2.0.0",
+    "simple-icons": "^16.34.0",
+    "svgpath": "^2.6.0",
+    "three": "^0.186.1",
+    "vue": "^3.5.43",
+    "vue-i18n": "^11.4.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/clipper-lib": "^6.4.0",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^22.20.5",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/tsconfig": "^0.9.1",
+    "eslint": "^10.12.0",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3",
+    "vue-tsc": "^3.3.12"
+  }
+}

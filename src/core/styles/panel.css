@@ -1,0 +1,81 @@
+@layer components {
+  /* ------------------------------------------------------------------ */
+  /* Building blocks for tool panels (the settings sidebar)              */
+  /* ------------------------------------------------------------------ */
+  .tool-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  /* the main content input at the top (text, link, image, …) */
+  .content-card {
+    display: grid;
+    gap: 12px;
+    padding: 14px 16px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 34px;
+  }
+
+  .content-card__title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .content-card__title > .svg-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+  }
+
+  .content-textarea.textarea {
+    min-height: 92px;
+    max-height: 260px;
+    resize: none;
+  }
+
+  /* tabs that stick to the top of the sidebar while scrolling */
+  .panel-tabs {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    background: var(--surface-inset);
+  }
+
+  .tab-panels {
+    flex: 1 1 auto;
+  }
+
+  .tab-panel {
+    animation: tab-in 260ms var(--ease-out);
+  }
+
+  @keyframes tab-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .tab-panel__body {
+    display: grid;
+    gap: 14px;
+    padding: 16px;
+  }
+}
